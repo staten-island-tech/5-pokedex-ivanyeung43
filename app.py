@@ -18,11 +18,19 @@ data = json.load(pokedex)
 poke_num = 1
 
 def find_name(id):
-    lang_choice = input("What language do you prefer? English, Japanese Chinese, or French")
+    lang_choice = input("What language do you prefer? English, Japanese, Chinese, or French")
     if lang_choice == "English":
         for count in range(data[-1]["id"]):
             print(data[count]["name"]["english"])
-
+    elif lang_choice == "Japanese":
+        for count in range(data[-1]["id"]):
+            print(data[count]["name"]["japanese"])
+    elif lang_choice == "Chinese":
+        for count in range(data[-1]["id"]):
+            print(data[count]["name"]["chinese"])
+    elif lang_choice == "French":
+        for count in range(data[-1]["id"]):
+            print(data[count]["name"]["french"])
 find_name(1)
 
 
