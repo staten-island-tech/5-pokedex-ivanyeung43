@@ -1,6 +1,7 @@
 import json
 ## Open the JSON file of pokemon data
 pokedex = open("./pokedex.json", encoding="utf8")
+
 ## create variable "data" that represents the enitre pokedex list
 
 
@@ -15,22 +16,28 @@ pokedex = open("./pokedex.json", encoding="utf8")
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
 
 data = json.load(pokedex)
-poke_num = 1
 
-def find_name(id):
+
+""" def find_name(id):
     lang_choice = input("What language do you prefer? English, Japanese, Chinese, or French")
     if lang_choice == "English":
-        for count in range(data[-1]["id"]):
+        for count in range(id):
             print(data[count]["name"]["english"])
     elif lang_choice == "Japanese":
-        for count in range(data[-1]["id"]):
+        for count in range(id):
             print(data[count]["name"]["japanese"])
     elif lang_choice == "Chinese":
-        for count in range(data[-1]["id"]):
+        for count in range(id):
             print(data[count]["name"]["chinese"])
     elif lang_choice == "French":
-        for count in range(data[-1]["id"]):
+        for count in range(id):
             print(data[count]["name"]["french"])
-find_name(1)
+find_name(data[-1]["id"]) """
 
-
+def find_type(id):
+    
+    poke_type = input("Search for pokemon type")
+    if poke_type == data[count]["type"]:
+        for count in range(id):
+            print(data[count]["type"])
+find_type(data[-1]["id"])
