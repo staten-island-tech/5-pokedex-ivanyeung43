@@ -11,9 +11,9 @@ pokedex = open("./pokedex.json", encoding="utf8")
 
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 
-#Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
+# Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
-#For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
+# For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
 
 data = json.load(pokedex)
 
@@ -34,10 +34,13 @@ data = json.load(pokedex)
             print(data[count]["name"]["french"])
 find_name(data[-1]["id"]) """
 
-def find_type(id):
+
+""" def find_type(id):
     
     poke_type = input("Search for pokemon type")
-    if poke_type == data[count]["type"]:
-        for count in range(id):
-            print(data[count]["type"])
-find_type(data[-1]["id"])
+    for count in range(id):
+        if poke_type in data[count]["type"]:
+            print(data[count]["name"])
+find_type(data[-1]["id"]) """
+
+def poke_search()
