@@ -56,3 +56,6 @@ find_type(data[-1]["id"]) """
         print("No pokemon found")
 poke_search("Char") """
 
+def find_moves(pokemon):
+
+find_moves("Bulbasaur")
