@@ -43,13 +43,9 @@ find_name(data[-1]["id"]) """
             print(data[count]["name"])
 find_type(data[-1]["id"]) """
 
-def poke_search(search):
-    search_bar = input("Search for a pokemon")
-    found_pokemon = ()
-    for character in range(search):
-        if search_bar in data[character]["name"]:
-            found_pokemon.append(data[character]["name"])
-    if search_bar not in data[character]["name"]:
-        print("No Pokemon Found")
-    print(found_pokemon)
-poke_search(data[-1]["id"])
+def poke_search(search_list):
+    found_poke
+    for count in range(data[-1]["id"]):
+        if search_list in data[count]["name"]["enlgish"]:
+
+poke_search("Char")
