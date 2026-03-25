@@ -57,5 +57,7 @@ find_type(data[-1]["id"]) """
 poke_search("Char") """
 
 def find_moves(pokemon):
-
+    if data[x]["type"] == move_data[x]["type"]:
+        print(move_data[x]["ename"])
+            
 find_moves("Bulbasaur")
