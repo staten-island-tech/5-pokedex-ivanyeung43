@@ -61,3 +61,29 @@ def find_moves(pokemon):
         print(move_data[x]["ename"])
             
 find_moves("Bulbasaur")
+
+""" def count_trees(amt, height):
+    current_increase_streak = 1
+    current_decrease_streak = 2
+    largest_increase_streak = 1
+    largest_decrease_streak = 1
+
+    for track in range(int(amt) - 1):
+
+        if height[track] < height[track+1]:
+            current_increase_streak += 1
+            if current_decrease_streak > largest_decrease_streak:
+                largest_decrease_streak = current_decrease_streak
+
+            current_decrease_streak = 1 
+        if height[track] > height[track+1]:
+            current_decrease_streak += 1
+
+            if current_increase_streak > largest_increase_streak:
+                largest_increase_streak = current_increase_streak
+
+            current_increase_streak = 1
+
+    print(largest_increase_streak)
+    print(largest_decrease_streak)
+count_trees(10, [2, 1, 4, 6, 8, 2, 9, 5, 2, 3]) """
