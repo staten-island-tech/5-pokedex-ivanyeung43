@@ -56,20 +56,20 @@ find_type(data[-1]["id"]) """
         print("No pokemon found")
 poke_search("Char") """
 
-def find_moves(pokemon):
+""" def find_moves(pokemon):
     found_poke = []
     found = 0
     for count in range(data[-1]["id"]):
         if pokemon in data[count]["name"]["english"]:
             found_poke.append(data[count]["name"]["english"])
             found += 1
-    if found > 0:
-        for track in range(move_data[-1]["id"]):
-            if move_data[track] == 
-    if found == 0:
-        ("Invalid Pokemon")
+        if found > 0:
+            for track in range(move_data[-1]["id"]):
+                if move_data[track]["type"] == 
+        if found == 0:
+            print("Invalid Pokemon")
             
-find_moves("Bulbasaur")
+find_moves("Bulbasaur") """
 
 
 
@@ -98,3 +98,33 @@ find_moves("Bulbasaur")
     print(largest_increase_streak)
     print(largest_decrease_streak)
 count_trees(4, [1,3,4,2]) """
+
+#Sushi Receipt
+
+sushi_orders = [
+    {"name": "California Roll", "price": 8},
+    {"name": "Spicy Tuna Roll", "price": 10},
+    {"name": "Salmon Nigiri", "price": 6},
+    {"name": "California Roll", "price": 8},
+    {"name": "Dragon Roll", "price": 12},
+    {"name": "Spicy Tuna Roll", "price": 10},
+    {"name": "Miso Soup", "price": 4},
+    {"name": "Edamame", "price": 5},
+    {"name": "Salmon Nigiri", "price": 6},
+    {"name": "California Roll", "price": 8}
+]
+
+def receipt(orders):
+    receipt = {}
+    for order in orders:
+        if order["name"] in receipt:
+            receipt[order]["name"]["quantity"] += 1
+        else:
+            receipt[order]["name"] = {
+                "price":order["price"],
+                "quantity" : 1
+            }
+
+    print(receipt)
+    
+receipt(sushi_orders)
