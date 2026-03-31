@@ -100,8 +100,7 @@ find_moves("Bulbasaur") """
 count_trees(4, [1,3,4,2]) """
 
 #Sushi Receipt
-
-sushi_orders = [
+""" sushi_orders = [
     {"name": "California Roll", "price": 8},
     {"name": "Spicy Tuna Roll", "price": 10},
     {"name": "Salmon Nigiri", "price": 6},
@@ -114,17 +113,32 @@ sushi_orders = [
     {"name": "California Roll", "price": 8}
 ]
 
-def receipt(orders):
+def receipt_order(orders):
     receipt = {}
     for order in orders:
         if order["name"] in receipt:
-            receipt[order]["name"]["quantity"] += 1
+            receipt[order["name"]]["quantity"] += 1
         else:
-            receipt[order]["name"] = {
+            receipt[order["name"]] = {
                 "price":order["price"],
                 "quantity" : 1
             }
 
-    print(receipt)
-    
-receipt(sushi_orders)
+    for sushi, value in receipt.items():
+        price = value["price"] * value["quantity"]
+        print(sushi, price)
+receipt_order(sushi_orders) """
+
+#Doctors Problem
+wards = {
+    "Cardiology":  ["Alice", "Bob", "Carol"],
+    "Neurology":   ["Diana", "Eve"],
+    "Orthopedics": ["Frank", "Grace", "Hank"],
+    "Oncology":    ["Ivy", "Bob"]
+}
+
+staff = {}
+def sort_staff(sorts):
+    for ward, staff in wards.items():
+        
+sort_staff(wards)
