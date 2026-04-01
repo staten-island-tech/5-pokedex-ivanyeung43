@@ -137,8 +137,14 @@ wards = {
     "Oncology":    ["Ivy", "Bob"]
 }
 
-staff = {}
-def sort_staff(sorts):
-    for ward, staff in wards.items():
-        
-sort_staff(wards)
+staff_dict = {}
+
+for dept, staff_mem in wards.items():
+    for staff in staff_mem:
+        if staff in staff_dict:
+            staff_dict[staff].append(dept)
+        else:
+            staff_dict[staff] = [dept]
+
+print(staff_dict)
+
