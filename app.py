@@ -58,16 +58,11 @@ poke_search("Char") """
 
 def find_moves(pokemon):
     found_poke = []
-    found = 0
     for count in range(data[-1]["id"]):
         if pokemon in data[count]["name"]["english"]:
-            found_poke.append(data[count]["name"]["english"])
-            found += 1
-        if found > 0:
-            for track in range(move_data[-1]["id"]):
-                if move_data[track]["type"] == 
-        if found == 0:
-            print("Invalid Pokemon")
+            if move_data[count]["type"] == data[count]["type"]:
+                print(move_data[count]["ename"])
+
             
 find_moves("Bulbasaur")
 
