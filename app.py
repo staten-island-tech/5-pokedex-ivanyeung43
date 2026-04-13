@@ -56,7 +56,7 @@ find_type(data[-1]["id"]) """
         print("No pokemon found")
 poke_search("Char") """
 
-""" def find_moves(pokemon):
+def find_moves(pokemon):
     found_poke = []
     found = 0
     for count in range(data[-1]["id"]):
@@ -69,7 +69,7 @@ poke_search("Char") """
         if found == 0:
             print("Invalid Pokemon")
             
-find_moves("Bulbasaur") """
+find_moves("Bulbasaur")
 
 
 
@@ -130,7 +130,7 @@ def receipt_order(orders):
 receipt_order(sushi_orders) """
 
 #Doctors Problem
-wards = {
+""" wards = {
     "Cardiology":  ["Alice", "Bob", "Carol"],
     "Neurology":   ["Diana", "Eve"],
     "Orthopedics": ["Frank", "Grace", "Hank"],
@@ -146,5 +146,5 @@ for dept, staff_mem in wards.items():
         else:
             staff_dict[staff] = [dept]
 
-print(staff_dict)
+print(staff_dict) """
 
