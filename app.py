@@ -62,7 +62,8 @@ def find_moves(pokemon):
     found_moves = {}
     for count in range(data[-1]["id"]):
         if pokemon in data[count]["name"]["english"]:
-            if move_data[count]["type"] in data[count]["type"]:
+
+            if move_data[count]["type"] == data[count]["type"]:
                 print(1)
 
 
