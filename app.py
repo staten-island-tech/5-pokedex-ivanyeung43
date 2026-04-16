@@ -61,15 +61,16 @@ found_moves = {}
 def find_moves(pokemon):
     found_poke_type = []
     for count in data:
-        if pokemon in count["name"]["english"]:
-            found_poke_type.append(data[count]["type"])
+        if pokemon in [count["name"]["english"]]:
+            found_poke_type.append(count["type"])
         print(found_poke_type)
-        """ if move_data[count]["type"] in found_poke_type:
+    for counts in move_data:
+        if found_poke_type in [counts["type"]]:
             print(1)
-            found_moves[count["name"]] = {
-            "name":count["ename"]
+            found_moves[counts["name"]] = {
+            "name":counts["ename"]
             }
-    print(found_moves) """
+    print(found_moves)
 find_moves("Bulbasaur")
 
 
