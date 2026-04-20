@@ -57,17 +57,16 @@ find_type(data[-1]["id"]) """
 poke_search("Char") """
 
 
-found_moves = {}
+
 def find_moves(pokemon):
+    found_moves = []
     found_poke_type = []
     for count in data:
         if pokemon in [count["name"]["english"]]:
             for x in count["type"]:
                 found_poke_type.append(x)
-        if move_data[count["type"]] in found_poke_type:
-            found_moves[count["name"]] = {
-                "names":[count["ename"]]
-            }
+        if move_data[count]["type"] in found_poke_type:
+            found_moves.append(move_data[count]["type"])
     print(found_moves)
 find_moves("Bulbasaur")
 
